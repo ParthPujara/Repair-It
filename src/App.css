@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Orelega+One&display=swap");
+
+* {
+  font-family: "Orelega One";
+  color: #fff;
+}
+body {
+  background-color: #7091f5;
+  padding: 0 20px;
+}
+.home_section1_left {
+  /* float: right; */
+  font-size: 72px;
+  height: 100vh;
+}
+.home_section1_right {
+  /* float: left; */
+}
+.home_section1_right video {
+  mix-blend-mode: multiply;
+}
+.home_section1_right_video{
+  border-radius: 100px 100px 0 100px;
+}
+.home_section2 {
+  clear: both;
+}
+.home_section2_heading {
+  font-size: 72px;
+  text-align: center;
+}
+.home_section2_cashOnDelivery_heading, .home_section2_onPointDelievery_heading {
+  font-size: 60px;
+}
+.home_section2_cashOnDelivery_description, .home_section2_onPointDelievery_description {
+  font-size: 30px;
+}
