@@ -41,5 +41,5 @@ body {
 .counter {
   position: absolute;
   font-size: 70px;
-  color: #7091f5;
+  /* color: #7091f5; */
 }
