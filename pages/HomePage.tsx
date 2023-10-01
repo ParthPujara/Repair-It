@@ -1,4 +1,3 @@
-import React from 'react'
 import Section1 from '../components/HomePage/Section1'
 
 const HomePage = () => {

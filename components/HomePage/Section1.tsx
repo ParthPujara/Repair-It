@@ -1,14 +1,16 @@
-import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import CashOnDelivery from "../../public/Home Animations/CashOnDelivery.mp4";
 import OnPointDelivery from "../../public/Home Animations/OnPointDelivery.mp4";
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
+import CountUp from "react-countup";
+import Cloud from "../../public/Home Page Images/Cloud.png";
+
+// import {
+//   Card,
+//   CardBody,
+//   CardFooter,
+//   Typography,
+//   Button,
+// } from "@material-tailwind/react";
 const Section1 = () => {
   return (
     <div>
@@ -38,7 +40,7 @@ const Section1 = () => {
       </div>
 
       <div className="home_section2">
-        <div className="home_section2_heading">Our Services</div>
+        <div className="home_heading">Our Services</div>
         <div className="home_section2_cashOnDelivery flex justify-around items-center">
           <div className="home_section2_cashOnDelivery_content flex flex-col">
             <div className="home_section2_cashOnDelivery_heading">
@@ -70,17 +72,15 @@ const Section1 = () => {
               className="home_section1_right_video"
             />
           </div>
-<div className="home_section2_onPointDelievery_content flex flex-col">
-  
-          <div className="home_section2_onPointDelievery_heading">
-          On Point Delivery
-          </div>
-          <div className="home_section2_onPointDelievery_description">
-            We deliver the products at your door step.
+          <div className="home_section2_onPointDelievery_content flex flex-col">
+            <div className="home_section2_onPointDelievery_heading">
+              On Point Delivery
+            </div>
+            <div className="home_section2_onPointDelievery_description">
+              We deliver the products at your door step.
+            </div>
           </div>
         </div>
-        
-</div>
         {/* <div className="home_section2_services_cards">
           <div className="card">
           <Card className="mt-6 w-96">
@@ -130,6 +130,30 @@ const Section1 = () => {
     </Card>
           </div>
         </div> */}
+      </div>
+
+      <div className="home_section3">
+        <div className="home_heading">Our Users</div>
+        <div className="home_section3_counters">
+          <div className="mobile+_counter">
+            <div className="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+</svg>
+            </div>
+            <CountUp
+              start={0}
+              end={1000}
+              className="counter"
+              delay={1}
+              duration={5}
+              separator=","
+              useEasing={true}
+              enableScrollSpy={true}
+            />
+            <span className="counter">+</span>
+          </div>
+        </div>
       </div>
     </div>
   );

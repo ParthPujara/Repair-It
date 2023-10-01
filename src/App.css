@@ -19,19 +19,27 @@ body {
 .home_section1_right video {
   mix-blend-mode: multiply;
 }
-.home_section1_right_video{
+.home_section1_right_video {
   border-radius: 100px 100px 0 100px;
 }
 .home_section2 {
   clear: both;
 }
-.home_section2_heading {
+.home_heading {
   font-size: 72px;
   text-align: center;
 }
-.home_section2_cashOnDelivery_heading, .home_section2_onPointDelievery_heading {
+.home_section2_cashOnDelivery_heading,
+.home_section2_onPointDelievery_heading {
   font-size: 60px;
 }
-.home_section2_cashOnDelivery_description, .home_section2_onPointDelievery_description {
+.home_section2_cashOnDelivery_description,
+.home_section2_onPointDelievery_description {
   font-size: 30px;
+}
+
+.counter {
+  position: absolute;
+  font-size: 70px;
+  color: #7091f5;
 }
