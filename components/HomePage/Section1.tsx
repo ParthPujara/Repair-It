@@ -2,7 +2,6 @@ import { TypeAnimation } from "react-type-animation";
 import CashOnDelivery from "../../public/Home Animations/CashOnDelivery.mp4";
 import OnPointDelivery from "../../public/Home Animations/OnPointDelivery.mp4";
 import CountUp from "react-countup";
-import Cloud from "../../public/Home Page Images/Cloud.png";
 
 // import {
 //   Card,
