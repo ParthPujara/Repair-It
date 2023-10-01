@@ -39,7 +39,7 @@ body {
 }
 
 .counter {
-  position: absolute;
+  /* position: absolute; */
   font-size: 70px;
   /* color: #7091f5; */
 }
