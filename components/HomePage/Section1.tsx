@@ -4,15 +4,8 @@ import OnPointDelivery from "../../public/Home Animations/OnPointDelivery.mp4";
 import D2DDelivery from "../../public/Home Animations/D2DDelivery.mp4";
 import CountUp from "react-countup";
 
-// import {
-//   Card,
-//   CardBody,
-//   CardFooter,
-//   Typography,
-//   Button,
-// } from "@material-tailwind/react";
 const Section1 = () => {
-  return (
+    return (
     <div>
       <div className="home_section1">
         <video
@@ -20,12 +13,11 @@ const Section1 = () => {
           autoPlay
           loop
           muted
-          ref={(ref) => {ref.playbackRate= 0.8}}
           playsInline
           className="home_section1_top_video"
         />
         <div className="home_section1_left flex justify-center items-center flex-col text-center">
-          We repair 
+          We repair
           <TypeAnimation
             sequence={["Mobile...", 1000, "Laptop...", 1000]}
             wrapper="span"
