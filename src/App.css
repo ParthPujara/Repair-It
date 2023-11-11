@@ -7,14 +7,24 @@
 body {
   background-color: #7091f5;
   padding: 0 20px;
+  overflow-x: hidden;
 }
 .home_section1_left {
   /* float: right; */
   font-size: 72px;
   height: 100vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  color: #ff4d72;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-.home_section1_right {
-  /* float: left; */
+.home_section1_top_video {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
 }
 .home_section1_right video {
   mix-blend-mode: multiply;
@@ -37,9 +47,25 @@ body {
 .home_section2_onPointDelievery_description {
   font-size: 30px;
 }
-
+.mobile_counter {
+  background-color: #b07df1;
+  padding: 20px;
+  border-radius: 25px;
+  min-width: 200px;
+  text-align: center;
+}
+.mobile_svg {
+  height: 80px;
+  width: 80px;
+  background: #ff4d72;
+  border-radius: 50px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+.mobile_svg:hover {
+  rotate: 360deg;
+  padding: 10px;
+}
 .counter {
-  /* position: absolute; */
-  font-size: 70px;
-  /* color: #7091f5; */
+  font-size: 50px;
 }
