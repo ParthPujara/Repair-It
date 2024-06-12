@@ -16,7 +16,7 @@ const AboutSection = () => {
         >
           <img src={AboutImg} alt="" />
         </motion.div>
-        <div className="right w-full md:max-w-[800px] text-xl">
+        <div className="right w-full md:max-w-[500px] text-lg">
           We offer lightning-fast, affordable electronic repairs with guaranteed
           same-day delivery. Trust our experts for seamless service and
           unbeatable convenience. Your satisfaction, our mission.

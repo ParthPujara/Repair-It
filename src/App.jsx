@@ -6,15 +6,19 @@ import Navbar from "./components/Navbar";
 import HomeSection from "./components/HomeSection";
 import AboutSection from "./components/AboutSection";
 import ServiceSection from "./components/ServiceSection";
+import ContactSection from "./components/ContactSection";
+import StepsSection from "./components/StepsSection";
 
 function App() {
   return (
     <div className="text-white">
       <Navbar />
       <div className="px-4">
-      <HomeSection />
-      <AboutSection/>
-      <ServiceSection/>
+        <HomeSection />
+        <AboutSection />
+        <ServiceSection />
+        <StepsSection/>
+        <ContactSection/>
         {/* <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomeSection />} />
