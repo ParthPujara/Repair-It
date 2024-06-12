@@ -6,7 +6,7 @@ const Navbar = () => {
       <nav className="relative bg-gray-900 w-full z-20 top-0 start-0 border-b border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
-            href="https://flowbite.com/"
+            href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
@@ -15,15 +15,15 @@ const Navbar = () => {
               alt="Flowbite Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-              Repair IT
+              Repair It
             </span>
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button
               type="button"
-              className="text-white  font-medium rounded-lg text-sm px-4 py-2 text-center bg-[#ec0e4f] hover:bg-[#ec0e4f] focus:ring-[#ec0e4f]"
+              className="text-white  font-medium rounded-lg text-sm px-4 py-2 text-center bg-[#ec0e4f] hover:bg-white hover:text-black hover:ring-[#ec0e4f]"
             >
-              Share problem
+              <a href="#contact">Share problem</a>
             </button>
             <button
               data-collapse-toggle="navbar-sticky"
@@ -57,16 +57,15 @@ const Navbar = () => {
             <motion.ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  bg-gray-800 md:bg-gray-900 border-gray-700">
               <li>
                 <a
-                  href="#"
-                  className="block py-2 px-3 text-white bg-[#ec0e4f] rounded md:bg-transparent  md:p-0 md:text-[#ec0e4f]"
-                  aria-current="page"
+                  href="/"
+                  className="block py-2 px-3 text-white rounded md:bg-transparent  md:p-0 md:hover:text-[#ec0e4f]"
                 >
                   Home
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#about"
                   className="block py-2 px-3  md:p-0 md:hover:text-[#ec0e4f] text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
                 >
                   About
@@ -74,7 +73,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#our-services"
                   className="block py-2 px-3  md:p-0 md:hover:text-[#ec0e4f] text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
                 >
                   Services
@@ -82,7 +81,15 @@ const Navbar = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#steps-of-service"
+                  className="block py-2 px-3  md:p-0 md:hover:text-[#ec0e4f] text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
+                >
+                  Steps of services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
                   className="block py-2 px-3  md:p-0 md:hover:text-[#ec0e4f] text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
                 >
                   Contact

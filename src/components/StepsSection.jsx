@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const StepsSection = () => {
     return (
-        <>
+        <section id='steps-of-service'>
             <div className="main-heading text-center mb-12">Steps of Service</div>
             <ol className="relative border-s border-gray-200 max-w-[550px] mx-auto">
                 <li className="mb-40 ms-36 flex flex-col justify-center">
@@ -43,7 +43,7 @@ const StepsSection = () => {
             </ol>
 
 
-        </>
+        </section>
     )
 }
 

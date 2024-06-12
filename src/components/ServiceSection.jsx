@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const ServiceSection = () => {
   return (
-    <div>
+    <section id="our-services">
       <div className="main-heading text-center">Our Services </div>
 
       <div className="flex gap-5 justify-around lg:flex-nowrap flex-wrap px-4">
@@ -50,7 +50,7 @@ const ServiceSection = () => {
           right!
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

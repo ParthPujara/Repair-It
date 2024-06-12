@@ -8,6 +8,7 @@ import AboutSection from "./components/AboutSection";
 import ServiceSection from "./components/ServiceSection";
 import ContactSection from "./components/ContactSection";
 import StepsSection from "./components/StepsSection";
+import FooterSection from "./components/FooterSection";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           </Routes>
         </BrowserRouter> */}
       </div>
+      <FooterSection/>
     </div>
   );
 }
