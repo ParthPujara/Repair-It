@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <>
-      <nav className="relative bg-gray-900 w-full z-20 top-0 start-0 border-b border-gray-600">
+      <nav className="fixed bg-gray-900 w-full z-20 top-0 start-0 border-b border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="/"
@@ -57,7 +57,7 @@ const Navbar = () => {
             <motion.ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  bg-gray-800 md:bg-gray-900 border-gray-700">
               <li>
                 <a
-                  href="/"
+                  href="#"
                   className="block py-2 px-3 text-white rounded md:bg-transparent  md:p-0 md:hover:text-[#ec0e4f]"
                 >
                   Home
@@ -104,6 +104,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-// 188
-// 217
-// 12

@@ -14,11 +14,14 @@ function App() {
   return (
     <div className="text-white">
       <Navbar />
-      <div className="px-4">
+      <div className="px-4 md:px-18">
         <HomeSection />
         <AboutSection />
         <ServiceSection />
+        <div className="ps-20">
+
         <StepsSection/>
+        </div>
         <ContactSection/>
         {/* <BrowserRouter>
           <Routes>
