@@ -17,7 +17,8 @@ const ContactSection = () => {
         grecaptcha.ready(function () {
             grecaptcha.execute('6Lc2pfcpAAAAANHxr3sjAXauuiAoojrVDbD4vJKW', { action: 'submit' }).
                 then(function (token) {
-                    setData({ ...data, 'g-recaptcha-response': token })
+                    //setData({ ...data, 'g-recaptcha-response': token })
+                    console.log(data)
                     if (data.name == '') {
                         callError("Name feild cannot be empty")
                     }
@@ -30,20 +31,19 @@ const ContactSection = () => {
                             callError("Minimum length of number must be between 10 to 12 digits")
                         }
                     }
-                    fetchAPI();
+                    fetchAPI(token);
                 });
         });
     }
-    const options = {
-        header: {
-            "Accept": "application/json",
-            "Content-Type": "application/x-www-form-urlencoded",
-        },
-        method: 'POST',
-        body: JSON.stringify({ data })
-    }
-    const fetchAPI = async () => {
-        var response = await fetch("https://include.ethiccraft.com/api/contactUs", options)
+    const fetchAPI = async (token) => {
+        var response = await fetch("https://include.ethiccraft.com/api/contactUs", {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+            },
+            method: 'POST',
+            body: JSON.stringify({...data, 'g-recaptcha-response': token})
+        })
         var data1 = await response.json();
         console.log(data1)
     }
