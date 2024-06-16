@@ -87,14 +87,6 @@ const Navbar = () => {
                   Steps of services
                 </a>
               </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="block py-2 px-3  md:p-0 md:hover:text-[#ec0e4f] text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700"
-                >
-                  Contact
-                </a>
-              </li>
             </motion.ul>
           </div>
         </div>

@@ -5,6 +5,21 @@
 .main-heading{
     font-size: 96px;
 }
+@media screen and (max-width: 1024px){
+    .main-heading{
+        font-size: 80px;
+    }   
+}
+@media screen and (max-width: 768px){
+    .main-heading{
+        font-size: 70px;
+    }   
+}
+@media screen and (max-width: 425px){
+    .main-heading{
+        font-size: 65px;
+    }   
+}
 .main-heading{
     text-shadow: 0 0 10px #fff;
 }

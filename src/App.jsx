@@ -14,15 +14,16 @@ function App() {
   return (
     <div className="text-white">
       <Navbar />
-      <div className="px-4 md:px-18">
+      <div className="px-4 md:px-18 pt-24">
         <HomeSection />
         <AboutSection />
-        <ServiceSection />
-        <div className="ps-20">
-
-        <StepsSection/>
+        <div className="pt-24">
+          <ServiceSection />
         </div>
-        <ContactSection/>
+          <StepsSection />
+        <div className="pt-24">
+          <ContactSection />
+        </div>
         {/* <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomeSection />} />
@@ -30,7 +31,7 @@ function App() {
           </Routes>
         </BrowserRouter> */}
       </div>
-      <FooterSection/>
+      <FooterSection />
     </div>
   );
 }

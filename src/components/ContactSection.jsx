@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ContactImg from '../assets/contact.png'
+import ContactImg from '../assets/contact.svg'
 import { IoCall } from "react-icons/io5";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import { motion } from 'framer-motion'
@@ -42,7 +42,7 @@ const ContactSection = () => {
                 "Content-Type": "application/json",
             },
             method: 'POST',
-            body: JSON.stringify({...data, 'g-recaptcha-response': token})
+            body: JSON.stringify({ ...data, 'g-recaptcha-response': token })
         })
         var data1 = await response.json();
         console.log(data1)
@@ -64,37 +64,45 @@ const ContactSection = () => {
         <section id='contact'>
             <div className="main-heading text-center mt-20 ">Contact</div>
             <div className="flex justify-between items-center flex-wrap">
-                <div className="left w-full lg:w-1/2 flex items-center flex-col md:order-first order-last">
-                    <img src={ContactImg} alt="" width="50%" />
-                    <div className="mobile-number flex justify-center items-center gap-4 md:flex-row md:flex-wrap">
-                        <motion.div whileHover={{
-                            scale: 1.1,
-                            textShadow: "0 0 15px #bcd90c",
-                            boxShadow: "0 0 15px #bcd90c",
-                        }} className="number-one flex gap-2 items-center hover:border border-[#bcd90c] p-3 cursor-pointer">
-                            <IoCall color='#bcd90c' /> +91 88492 07626
-                        </motion.div>
-                        <motion.div whileHover={{
-                            scale: 1.1,
-                            textShadow: "0 0 15px #bcd90c",
-                            boxShadow: "0 0 15px #bcd90c",
-                        }} className="number-two flex gap-2 items-center hover:border border-[#bcd90c] p-3 cursor-pointer">
+                <div className="left md:mt-0 mt-10 w-full md:w-1/2 flex items-center flex-col md:order-first order-last">
+                    <img src={ContactImg} alt=""  className='w-full md:w-2/3 ps-10'/>
+                    <div className="mobile-number flex flex-col justify-center items-center gap-4 md:flex-row md:flex-wrap md:mt-0 -mt-10">
+                        <motion.a
+                            href="tel:+918849207626"
+                            whileHover={{
+                                scale: 1.1,
+                                textShadow: "0 0 15px #bcd90c",
+                                boxShadow: "0 0 15px #bcd90c",
+                            }} className="number-one flex gap-2 items-center hover:border border-[#bcd90c] p-3 cursor-pointer">
+                            <IoCall color='#bcd90c' />+91 88492 07626
+                        </motion.a>
+                        <motion.a
+                            href="tel:+919558992374"
+                            whileHover={{
+                                scale: 1.1,
+                                textShadow: "0 0 15px #bcd90c",
+                                boxShadow: "0 0 15px #bcd90c",
+                            }} className="number-two flex gap-2 items-center hover:border border-[#bcd90c] p-3 cursor-pointer">
                             <IoCall color='#bcd90c' /> +91 95589 92374
-                        </motion.div>
-                        <motion.div whileHover={{
-                            scale: 1.1,
-                            textShadow: "0 0 15px #bcd90c",
-                            boxShadow: "0 0 15px #bcd90c",
-                        }} className="number-two flex gap-2 items-center hover:border border-[#bcd90c] p-3 cursor-pointer">
+                        </motion.a>
+                        <motion.a
+                            href="tel:+919016704057"
+                            whileHover={{
+                                scale: 1.1,
+                                textShadow: "0 0 15px #bcd90c",
+                                boxShadow: "0 0 15px #bcd90c",
+                            }} className="number-two flex gap-2 items-center hover:border border-[#bcd90c] p-3 cursor-pointer">
                             <IoCall color='#bcd90c' /> +91 90167 04057
-                        </motion.div>
-                        <motion.div whileHover={{
+                        </motion.a>
+                        <motion.a 
+                        href="https://wa.me/+91884920766?text=Hello,\nI%20have%20a%20service%20request.%20(Our%20person%20will%20call%20you)"
+                        whileHover={{
                             scale: 1.1,
                             textShadow: "0 0 15px #bcd90c",
                             boxShadow: "0 0 15px #bcd90c",
-                        }} className="whatsapp flex gap-2 items-center hover:border border-[#bcd90c] p-3 cursor-pointer">
+                        }} className="whatsapp flex gap-2 items-center hover:border border-[#bcd90c] p-2 cursor-pointer">
                             <IoLogoWhatsapp color='#bcd90c' /> Connect us through whatsapp
-                        </motion.div>
+                        </motion.a>
                     </div>
 
 
