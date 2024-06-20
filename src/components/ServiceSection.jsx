@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const ServiceSection = () => {
   return (
-    <section id="our-services">
+    <section id="our-services" className="pt-24">
       <div className="main-heading text-center">Our Services </div>
 
       <div className="flex gap-5 justify-around lg:flex-nowrap flex-wrap px-4">

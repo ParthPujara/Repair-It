@@ -3,7 +3,7 @@ import AboutImg from "../assets/about.svg";
 import { motion } from "framer-motion";
 const AboutSection = () => {
   return (
-    <section id="about pt-24">
+    <section id="about" className="pt-24">
       <div className="main-heading text-center ">About</div>
       <div className="flex justify-around items-center flex-wrap">
         <motion.div

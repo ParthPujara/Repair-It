@@ -1,9 +1,79 @@
-import React from "react";
-import { motion } from "framer-motion";
-const Navbar = () => {
+import React, { useState } from "react";
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+const Nav = () => {
+  const [openNav, setOpenNav] = React.useState(false);
+
+  React.useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 960 && setOpenNav(false),
+    );
+  }, []);
+  // State to manage the navbar's visibility
+  const [nav, setNav] = useState(false);
+
+  // Toggle function to handle the navbar's display
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+  // Array containing navigation items
+  const navItems = [
+    { id: 1, text: 'Home', link: "#" },
+    { id: 2, text: 'About', link: "#about" },
+    { id: 3, text: 'Services', link: "#our-services" },
+    { id: 4, text: 'Steps of service', link: "#steps-of-service" },
+    { id: 5, text: 'Contact', link: "#contact" },
+  ];
+
   return (
     <>
-      <nav className="fixed bg-gray-900 w-full z-20 top-0 start-0 border-b border-gray-600">
+      <div className='fixed w-screen bg-gray-900 flex justify-between items-center h-20 px-5 text-white font-medium border-b-[1px] '>
+        {/* Logo */}
+        <h1 className='w-full text-2xl font-bold text-[#fff]'>Repair IT</h1>
+
+        {/* Desktop Navigation */}
+        <ul className='hidden md:flex w-full'>
+          {navItems.map(item => (
+            <a href={item.link} key={item.id}>
+              <li
+                className='p-4 hover:text-[#ec0e4f] rounded-xl m-2 cursor-pointer duration-300'
+              >
+                {item.text}
+              </li>
+            </a>
+          ))}
+        </ul>
+
+        {/* Mobile Navigation Icon */}
+        <div onClick={handleNav} className='block md:hidden pe-4'>
+          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        </div>
+
+        {/* Mobile Navigation Menu */}
+        <ul
+          className={
+            nav
+              ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#222222] ease-in-out duration-500'
+              : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
+          }
+        >
+          {/* Mobile Logo */}
+          <h1 className='w-full text-2xl font-bold text-[#fff] m-4'>Repair IT</h1>
+
+          {/* Mobile Navigation Items */}
+          {navItems.map(item => (
+            <a href={item.link} key={item.id} onClick={()=>setNav(!nav)}>
+              <li
+                className='p-4 border-b rounded-xl hover:text-[#ec0e4f] duration-300 cursor-pointer border-gray-600 font-medium'
+              >
+                {item.text}
+              </li>
+            </a>
+          ))}
+        </ul>
+      </div>
+      {/* <nav className="fixed bg-gray-900 w-full z-20 top-0 start-0 border-b border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="/"
@@ -90,9 +160,9 @@ const Navbar = () => {
             </motion.ul>
           </div>
         </div>
-      </nav>
+      </nav> */}
     </>
   );
 };
 
-export default Navbar;
+export default Nav;

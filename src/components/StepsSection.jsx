@@ -38,7 +38,7 @@ const StepsSection = () => {
                         <img src={Step3Img} alt="" />
                     </motion.span>
                     <h3 className="mb-1 text-lg font-semibold dark:text-white">Expert Repair & Delivery</h3>
-                    <p className="text-base font-normal text-white">Get started with dozens of web components and interactive elements built on top of Tailwind CSS.</p>
+                    <p className="text-base font-normal text-white">Once you approve the quote, we swiftly repair your device and deliver it back to your doorstep, good as new.</p>
                 </li>
             </ol>
         </section>

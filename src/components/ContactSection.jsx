@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import ContactImg from '../assets/contact.svg'
 import { IoCall } from "react-icons/io5";
 import { IoLogoWhatsapp } from "react-icons/io5";
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ClipLoader } from 'react-spinners';
 const ContactSection = () => {
     const [data, setData] = useState({
         name: '',
@@ -13,12 +14,12 @@ const ContactSection = () => {
         message: '',
         'g-recaptcha-response': ''
     })
+    const [loading, setLoading] = useState(false)
     const submitData = () => {
+        setLoading(true);
         grecaptcha.ready(function () {
             grecaptcha.execute('6Lc2pfcpAAAAANHxr3sjAXauuiAoojrVDbD4vJKW', { action: 'submit' }).
                 then(function (token) {
-                    //setData({ ...data, 'g-recaptcha-response': token })
-                    console.log(data)
                     if (data.name == '') {
                         callError("Name feild cannot be empty")
                     }
@@ -44,8 +45,28 @@ const ContactSection = () => {
             method: 'POST',
             body: JSON.stringify({ ...data, 'g-recaptcha-response': token })
         })
-        var data1 = await response.json();
-        console.log(data1)
+        var responseData = await response.json();
+
+        if (responseData.status === true) {
+            callSuccess("Email Sent");
+            setData({
+                name: '',
+                email: '',
+                mobile: '',
+                message: '',
+            })
+            setLoading(false)
+        }
+        else if (responseData.status === true) {
+            callError("Something went wrong");
+            setData({
+                name: '',
+                email: '',
+                mobile: '',
+                message: '',
+            })
+            setLoading(false)
+        }
     }
     const callError = (message) => {
         toast.error(message, {
@@ -60,12 +81,25 @@ const ContactSection = () => {
             transition: Bounce,
         });
     }
+    const callSuccess = (message) => {
+        toast.success(message, {
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+    }
     return (
-        <section id='contact'>
+        <section id='contact' className="pt-1">
             <div className="main-heading text-center mt-20 ">Contact</div>
             <div className="flex justify-between items-center flex-wrap">
                 <div className="left md:mt-0 mt-10 w-full md:w-1/2 flex items-center flex-col md:order-first order-last">
-                    <img src={ContactImg} alt=""  className='w-full md:w-2/3 ps-10'/>
+                    <img src={ContactImg} alt="" className='w-full md:w-2/3 ps-10' />
                     <div className="mobile-number flex flex-col justify-center items-center gap-4 md:flex-row md:flex-wrap md:mt-0 -mt-10">
                         <motion.a
                             href="tel:+918849207626"
@@ -94,13 +128,13 @@ const ContactSection = () => {
                             }} className="number-two flex gap-2 items-center hover:border border-[#bcd90c] p-3 cursor-pointer">
                             <IoCall color='#bcd90c' /> +91 90167 04057
                         </motion.a>
-                        <motion.a 
-                        href="https://wa.me/+91884920766?text=Hello,\nI%20have%20a%20service%20request.%20(Our%20person%20will%20call%20you)"
-                        whileHover={{
-                            scale: 1.1,
-                            textShadow: "0 0 15px #bcd90c",
-                            boxShadow: "0 0 15px #bcd90c",
-                        }} className="whatsapp flex gap-2 items-center hover:border border-[#bcd90c] p-2 cursor-pointer">
+                        <motion.a
+                            href="https://wa.me/+91884920766?text=Hello,\nI%20have%20a%20service%20request.%20(Our%20person%20will%20call%20you)"
+                            whileHover={{
+                                scale: 1.1,
+                                textShadow: "0 0 15px #bcd90c",
+                                boxShadow: "0 0 15px #bcd90c",
+                            }} className="whatsapp flex gap-2 items-center hover:border border-[#bcd90c] p-2 cursor-pointer">
                             <IoLogoWhatsapp color='#bcd90c' /> Connect us through whatsapp
                         </motion.a>
                     </div>
@@ -151,10 +185,12 @@ const ContactSection = () => {
                             />
                         </div>
                         <div className="flex">
-                            <motion.input whileHover={{
-                                scale: 1.01,
-                                boxShadow: "0 0 10px #bcd90c",
-                            }} type="button" value="Submit" onClick={submitData} className='bg-[#bcd90c] text-black font-bold px-4 py-2 rounded-lg cursor-pointer' />
+                            {!loading ?
+                                <motion.input whileHover={{
+                                    scale: 1.01,
+                                    boxShadow: "0 0 10px #bcd90c",
+                                }} type="button" value="Submit" onClick={submitData} className='bg-[#bcd90c] text-black font-bold px-4 py-2 rounded-lg cursor-pointer' />
+                                : <div className='bg-[#bcd90c] text-black font-bold px-9 py-3 rounded-lg flex justify-center items-center'> <ClipLoader color="#111" size={20} /></div>}
                         </div>
                     </div>
                 </div>
