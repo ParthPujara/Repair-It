@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="text-white">
       <Nav />
-      <div className="px-4 md:px-18 pt-24 -z-10 relative" >
+      <div className="px-4 md:px-18 pt-24 -z-50" >
         <HomeSection />
         <AboutSection />
 

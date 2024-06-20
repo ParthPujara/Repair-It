@@ -28,7 +28,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className='fixed w-screen bg-gray-900 flex justify-between items-center h-20 px-5 text-white font-medium border-b-[1px] '>
+      <div className='fixed w-screen bg-gray-900 flex justify-between items-center h-20 px-5 text-white font-medium border-b-[1px] z-50'>
         {/* Logo */}
         <h1 className='w-full text-2xl font-bold text-[#fff]'>Repair IT</h1>
 
