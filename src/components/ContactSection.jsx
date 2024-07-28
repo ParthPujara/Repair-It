@@ -129,7 +129,7 @@ const ContactSection = () => {
                             <IoCall color='#bcd90c' /> +91 90167 04057
                         </motion.a>
                         <motion.a
-                            href="https://wa.me/+91884920766?text=Hello,\nI%20have%20a%20service%20request.%20(Our%20person%20will%20call%20you)"
+                            href="https://wa.me/+918849207626?text=Hello, I%20have%20a%20service%20request.%20(Our%20person%20will%20call%20you)"
                             whileHover={{
                                 scale: 1.1,
                                 textShadow: "0 0 15px #bcd90c",
